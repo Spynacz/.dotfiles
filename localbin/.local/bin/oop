@@ -1,0 +1,5 @@
+#!/bin/sh
+
+xdg-open https://app.universality.io/students/61600a6aef565200def57ca0/lesson_progresses?lecture_group_id=63fcaedf2f515300dd6f315c&locale=pl > /dev/null 2>&1
+
+idea dontReopenProjects nosplash > /dev/null 2>&1 &

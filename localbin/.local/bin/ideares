@@ -1,0 +1,5 @@
+#!/bin/sh
+
+hyprctl keyword monitor eDP-1,highres,0x1080,1
+idea dontReopenProjects nosplash
+hyprctl keyword monitor eDP-1,highres,96x1152,1.25

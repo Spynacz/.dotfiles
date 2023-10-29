@@ -1,0 +1,13 @@
+#!/bin/sh
+
+STATE=$(kreadconfig5 --file /home/mateusz/.config/kwinrc --group Plugins --key max2NewVirtualDesktopEnabled)
+#EXTERNAL=$(DISPLAY=:0 xrandr --current | sed 's/^\(.*\) connected.*$/\1/p;d' | grep -v ^eDP | cut -d "-" -f 1)
+HDMI_STATUS=$(cat /sys/class/drm/card0-HDMI-A-1/status)
+
+if [ "$HDMI_STATUS" = "connected" ]; then
+	kwriteconfig5 --file /home/mateusz/.config/kwinrc --group Plugins --key max2NewVirtualDesktopEnabled false
+elif [ "$HDMI_STATUS" = "disconnected" ]; then
+	kwriteconfig5 --file /home/mateusz/.config/kwinrc --group Plugins --key max2NewVirtualDesktopEnabled true
+fi
+
+runuser mateusz -c "qdbus org.kde.KWin /KWin reconfigure"

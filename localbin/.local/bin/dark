@@ -1,0 +1,17 @@
+#!/bin/sh
+
+kvantummanager --set Catppuccin-Mocha-Sapphire
+gsettings set org.gnome.desktop.interface gtk-theme rose-pine-moon-gtk
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+
+kitty +kitten themes --reload-in=all Rosé Pine Moon 
+
+# cp $HOME/.config/waybar/themes/macchiato.css $HOME/.config/waybar/current-theme.css
+# killall waybar && waybar & disown
+
+#cp $HOME/.local/share/rofi/themes/.rasi $HOME/.local/share/rofi/themes/current-theme.rasi
+
+cp $HOME/.config/polybar/themes/rose-pine-moon.ini $HOME/.config/polybar/current-theme.ini
+killall polybar && polybar -r main &
+
+echo "vim.opt.background = 'dark'" > $HOME/.config/nvim/lua/spynacz/theme.lua
