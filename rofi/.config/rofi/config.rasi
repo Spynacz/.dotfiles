@@ -17,5 +17,4 @@ configuration{
     me-accept-entry: "MousePrimary";
 }
 
-@theme "catppuccin-mocha"
 

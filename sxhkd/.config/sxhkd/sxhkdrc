@@ -2,21 +2,15 @@
 # █▄█ █▀▄ █ ▀▄█ █ █  █  █ ▀█ █▄▄ ▄██ ▄██
 # Brightness
 
-# F1
-XF86Explorer
-    ddcutil --bus 3 setvcp 10 - 10 --sleep-multiplier .1
+XF86MonBrightnessDown
+    brightnessctl set 5%-
 
-# F2
-XF86HomePage
-    ddcutil --bus 3 setvcp 10 + 10 --sleep-multiplier .1
+XF86MonBrightnessUp
+    brightnessctl set 5%+
 
-# F3
-XF86Calculator
+XF86WLAN
     
-
-# F4
 XF86Tools
-    
 
 # █▄ ▄█ ██▀ █▀▄ █ ▄▀▄
 # █ ▀ █ █▄▄ █▄▀ █ █▀█
@@ -40,6 +34,9 @@ XF86AudioLowerVolume
 XF86AudioRaiseVolume
     pactl set-sink-volume @DEFAULT_SINK@ +5%
 
+XF86AudioMicMute
+    pactl set-source-mute @DEFAULT_SOURCE@ toggle
+
 
 # █   ▄▀▄ █ █ █▄ █ ▄▀▀ █▄█ ██▀ █▀▄ ▄▀▀
 # █▄▄ █▀█ ▀▄█ █ ▀█ ▀▄▄ █ █ █▄▄ █▀▄ ▄██
@@ -59,7 +56,7 @@ super + d
     discord
 
 super + e
-    dolphin
+    thunar
 
 super + s
     spotify
