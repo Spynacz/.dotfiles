@@ -1,0 +1,6 @@
+#!/bin/bash
+
+xrandr -r 51
+"$@"
+pwait csgo_linux64
+xrandr -r 50

@@ -1,0 +1,60 @@
+# process names are case-insensitive
+# you can use 'master' to indicate the master channel, or a list of process names to create a group
+# you can use 'mic' to control your mic input level (uses the default recording device)
+# you can use 'deej.unmapped' to control all apps that aren't bound to any slider (this ignores master, system, mic and device-targeting sessions) (experimental)
+# you can use 'deej.current' to control the currently active app (whether full-screen or not) (experimental)
+# you can use a device's full name, i.e. "Speakers (Realtek High Definition Audio)", to bind it. this works for both output and input devices
+# windows only - you can use 'system' to control the "system sounds" volume
+# important: slider indexes start at 0, regardless of which analog pins you're using!
+slider_mapping:
+  0: master
+  1:
+    - teams
+    - firefox
+    - brave 
+  2: # mostly games
+    - deej.current
+    - playstation
+    # - witcher2
+    # - wine64-preloader
+    # - java
+    # - csgo_linux64
+    # - heroes3
+    # - deadcells
+    # - wine-preloader
+    # - hollow_knight.x86_64
+    # - rpcs3
+    # - r5apex.exe
+    # - witcher3.exe
+  3:
+    - discord
+  4: # media apps
+    - spotify
+    - vlc
+    - mpv
+    - elisa
+    - lollypop
+    - python3.9
+    - python3.11
+    - stremio
+    - tidal-hifi
+    - plexmediaplayer
+    - plex
+    - jellyfinmediaplayer
+    - plex-bin
+    - amberol
+    - mpd
+
+
+# set this to true if you want the controls inverted (i.e. top is 0%, bottom is 100%)
+invert_sliders: true
+
+# settings for connecting to the arduino board
+com_port: /dev/deej
+baud_rate: 9600
+
+# set percentage points increment to use when changing volume
+volume_step: 1
+
+# whether to change volume of current window if it's also explicitly mapped elsewhere
+current_ignore_mapped: true 

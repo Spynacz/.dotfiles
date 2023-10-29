@@ -1,0 +1,18 @@
+[global]
+frame_color = "#89b4fa"
+separator_color = frame
+font = IBM Plex Sans 12
+corner_radius = 15
+
+[urgency_low]
+background = "#1E1E2E"
+foreground = "#CDD6F4"
+
+[urgency_normal]
+background = "#1E1E2E"
+foreground = "#CDD6F4"
+
+[urgency_critical]
+background = "#1E1E2E"
+foreground = "#CDD6F4"
+frame_color = "#f38ba8"

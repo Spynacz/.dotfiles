@@ -1,0 +1,13 @@
+#!/bin/sh
+
+sudo pkill -USR1 fanctrl
+
+process=$(pgrep fan-fullspeed)
+
+if [ -n "$process" ]; then
+    kill $process
+    pkill gwe
+    gwe --hide-window & disown
+else
+    $HOME/.local/bin/fan-fullspeed
+fi

@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [[ ("$1" == "left") || ("$1" == "l") ]]; then
+	echo 'Rotating left'
+	xrandr --output DVI-I-0 --rotate left
+elif [[ ("$1" == "right") || ("$1" == "r") ]]; then
+	echo 'Rotating right'
+	xrandr --output DVI-I-0 --rotate right
+elif [[ ("$1" == "normal") || ("$1" == "n") ]]; then
+	echo 'Rotating normal'
+	xrandr --output DVI-I-0 --rotate normal
+elif [[ ("$1" == "inverted") || ("$1" == "i") ]]; then
+	echo 'Rotating inverted'
+	xrandr --output DVI-I-0 --rotate inverted
+else
+	echo 'You have to specify orientation (normal, left, right, inverted)'
+fi

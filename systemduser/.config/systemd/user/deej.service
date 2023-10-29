@@ -1,0 +1,12 @@
+[Unit]
+Description=Volume mixer
+
+[Service]
+Environment="DISPLAY=:0"
+Type=simple
+ExecStart=/usr/local/bin/deej -c %h/.config/deej/config.yaml
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=default.target

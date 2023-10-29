@@ -1,0 +1,11 @@
+#!/bin/sh
+
+isoccupied() {
+    bspc query --desktops --desktop "$1".occupied
+}
+
+if ! isoccupied 6 
+then
+    bspc node @6:/ -i
+    bspc node @6:/ -p north -o 0.35 -i
+fi
