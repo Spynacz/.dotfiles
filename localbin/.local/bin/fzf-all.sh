@@ -13,4 +13,4 @@ fi
 
 selected_name=$(basename "$selected")
 
-kitty @ launch --type=tab --hold --cwd=$selected --tab-title=$selected_name
+kitty @ launch --type=tab --hold --cwd=$selected --title=$selected_name
