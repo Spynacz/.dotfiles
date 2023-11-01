@@ -2,6 +2,7 @@ export EDITOR=nvim
 export TERM=kitty
 export BROWSER=firefox
 export GTK_USE_PORTAL=1
+export MOZ_USE_XINPUT2=1
 export PATH=$PATH:$HOME/.spicetify
 export PATH=$PATH:/opt/android-sdk/platform-tools
 export PATH=$PATH:$HOME/.local/bin
