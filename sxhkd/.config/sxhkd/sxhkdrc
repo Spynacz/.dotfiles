@@ -56,13 +56,13 @@ super + n
     obsidian
 
 super + d
-    discord
+    discord && bspc desktop --focus 10 && bspc desktop --focus last
 
 super + e
     dolphin
 
 super + s
-    spotify
+    spotify && bspc desktop --focus 10 && bspc desktop --focus last
 
 #super + c
 #    jellyfinmediaplayer
