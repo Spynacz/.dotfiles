@@ -46,7 +46,7 @@ source $ZSH/plugins/colored-man-pages.zsh
 source $ZSH/plugins/command-not-found.zsh
 source $ZSH/plugins/you-should-use.zsh
 
-#source $ZSH/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+source $ZSH/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 source $HOME/.aliases
 
