@@ -1,0 +1,52 @@
+# Git repo for dotfiles
+alias dotfiles='/usr/bin/git --git-dir=/home/mateusz/.dotfiles/ --work-tree=/home/mateusz'
+
+# Make sudo work with aliases
+alias sudo="sudo "
+
+# Neovim to Vim 
+alias vim="nvim"
+alias v="vim"
+
+# Systemctl aliases
+alias sds="systemctl start"
+alias sdr="systemctl restart"
+alias sde="systemctl enable"
+alias sdd="systemctl disable"
+alias sdc="systemctl status"
+
+alias b="vim $HOME/.config/bspwm/bspwmrc"
+alias s="vim $HOME/.config/sxhkd/sxhkdrc"
+
+# Pulseeffects profiles aliases
+# alias clean="pulseeffects -l \"Clean\""
+# alias akg="pulseeffects -l \"K612 AutoIEF\""
+# alias abas="pulseeffects -l \"K612 AutoIEF bass\""
+# alias akgb="pulseeffects -l \"K612 AutoIEF bass\""
+# alias akgbass="pulseeffects -l \"K612 AutoIEF bass\""
+# alias kz="pulseeffects -l \"KZ ZSN AutoIEF\""
+# alias kbas="pulseeffects -l \"KZ ZSN AutoIEF bass\""
+# alias kzb="pulseeffects -l \"KZ ZSN AutoIEF bass\""
+# alias kzbass="pulseeffects -l \"KZ ZSN AutoIEF bass\""
+
+alias la="ls -Alh"
+
+alias d="dirs -v"
+for index ({1..9}) alias "$index"="cd +${index}"; unset index
+
+# Git
+alias gs="git status"
+alias gc="git commit"
+alias ga="git add"
+alias gco="git checkout"
+alias gl="git log --graph --decorate"
+alias gp="git push"
+alias gpl="git pull"
+alias gf="git fetch"
+alias gwa="git worktree add"
+alias gwr="git worktree remove"
+alias gwl="git worktree list"
+
+# cd's
+alias rpg="cd $HOME/Documents/RPG"
+alias studia="cd $HOME/Documents/Studia"
