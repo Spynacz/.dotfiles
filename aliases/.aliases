@@ -50,3 +50,5 @@ alias gwl="git worktree list"
 # cd's
 alias rpg="cd $HOME/Documents/RPG"
 alias studia="cd $HOME/Documents/Studia"
+
+alias condify="source $HOME/.conda.zshrc && conda activate"
