@@ -35,7 +35,7 @@ source $ZSH/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 fpath=($ZSH/plugins/zsh-completions/src $fpath)
 
-source $ZSH/plugins/zsh-git-prompt/zshrc.sh
+source $ZSH/plugins/git-prompt.zsh/git-prompt.zsh
 
 source $ZSH/appearance.zsh
 source $ZSH/completion.zsh
@@ -63,13 +63,14 @@ bindkey '^[[B' history-substring-search-down
 ZSH_THEME_GIT_PROMPT_PREFIX="("
 ZSH_THEME_GIT_PROMPT_SUFFIX=" "
 ZSH_THEME_GIT_PROMPT_SEPARATOR=")"
+ZSH_GIT_PROMPT_SHOW_STASH=1
 
 if [[ -n $SSH_CONNECTION ]]; then
     PROMPT='%{$fg[yellow]%}% ➤ %{$reset_color%}'
-    PROMPT+=' %{$fg[yellow]%}%~%{$reset_color%} $(git_super_status)'
+    PROMPT+=' %{$fg[yellow]%}%~%{$reset_color%} $(gitprompt)'
 else
     PROMPT='%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )'
-    PROMPT+=' %{$fg[cyan]%}%~%{$reset_color%} $(git_super_status)'
+    PROMPT+=' %{$fg[cyan]%}%~%{$reset_color%} $(gitprompt)'
 fi
 
 
