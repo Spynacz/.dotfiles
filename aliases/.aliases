@@ -40,6 +40,7 @@ alias gc="git commit"
 alias ga="git add"
 alias gco="git checkout"
 alias gl="git log --graph --decorate"
+alias glo="git log --graph --decorate --oneline"
 alias gp="git push"
 alias gpl="git pull"
 alias gf="git fetch"
@@ -52,3 +53,6 @@ alias rpg="cd $HOME/Documents/RPG"
 alias studia="cd $HOME/Documents/Studia"
 
 alias condify="source $HOME/.conda.zshrc && conda activate"
+
+# kitty
+alias icat="kitten icat"
