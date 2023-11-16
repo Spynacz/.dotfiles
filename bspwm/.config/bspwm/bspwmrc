@@ -5,6 +5,7 @@
 
 #xset s off -dpms
 #xset s noblank
+xset dpms 300 300 300
 
 wmname LG3D
 export _JAVA_AWT_WM_NONREPARENTING=1
