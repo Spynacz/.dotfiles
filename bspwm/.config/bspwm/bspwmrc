@@ -59,6 +59,7 @@ bspc rule -a Spotify desktop=^6
 bspc rule -a Pavucontrol state=floating
 bspc rule -a firefox desktop=1 -o follow=on
 bspc rule -a kitty desktop=2 -o follow=on
+bspc rule -a Blueman-manager state=floating
 
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
@@ -74,7 +75,7 @@ killall polybar
 polybar -r main &
 polybar -r second &
 
-picom --daemon &
+compfy --daemon &
 
 pgrep bspswallow || bspswallow &
 
