@@ -49,11 +49,11 @@ super + t
     kitty --single-instance
 
 super + {_,shift} + b
-    GDK_DPI_SCALE=1.1 firefox {_,--private-window}
+    firefox {_,--private-window}
     #brave {_,--incognito}
 
-super + n
-    obsidian
+# super + n
+#     obsidian
 
 super + d
     discord && bspc desktop --focus 10 && bspc desktop --focus last
@@ -87,6 +87,9 @@ ctrl + Print
 
 ctrl + shift + Pause
     $HOME/.local/bin/fan-auto
+
+ctrl + shift + Print
+    killall deej && deej -c $HOME/.config/deej/config.yaml
 
 super + shift + x
     xcolor -s

@@ -1,7 +1,8 @@
 #! /bin/sh
 
-xrandr --output DP-0 --mode 1920x1080 --rate 144 --pos 0x0 --rotate left
+# bspwm-monitors.sh
 xrandr --output HDMI-0 --primary --mode 2560x1440 --rate 144 --pos 1080x180
+xrandr --output DP-0 --mode 1920x1080 --rate 144 --pos 0x0 --rotate left
 
 wmname LG3D
 
@@ -19,6 +20,9 @@ bspc monitor DP-0 -d 6 7 8 9 10
 # bspc desktop 3 -l monocle
 # bspc desktop 4 -l monocle
 # bspc desktop 5 -l monocle
+
+bspc config remove_unplugged_monitors false
+bspc config remove_disabled_monitors false
 
 bspc config border_width         2
 bspc config normal_border_color	 "#1e1e2e"
@@ -69,8 +73,7 @@ dunst &
 
 #copyq &
 
-killall redshift
-redshift &
+redshift -x && redshift &
 
 gwe --hide-window &
 
