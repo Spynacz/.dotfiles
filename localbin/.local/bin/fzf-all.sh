@@ -5,7 +5,7 @@ export FZF_DEFAULT_OPTS=" \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
 --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
 
-selected=$(fd . ~ --type f --type d --type l --hidden --exclude "*[Cc]ache*" --exclude ".mozilla" --exclude ".m2" --exclude "Trash" | fzf +m)
+selected=$(fd . ~ /games --type f --type d --type l --hidden --exclude "*[Cc]ache*" --exclude ".mozilla" --exclude ".m2" --exclude "Trash" | fzf +m)
 
 if [ -z "$selected" ]; then
     exit 0
