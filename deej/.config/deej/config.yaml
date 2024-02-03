@@ -45,6 +45,7 @@ slider_mapping:
   3:
     - discord
   4: master
+  5: firefox # doesn't exist, but prevents deej.current from changing firefox
 
 # set this to true if you want the controls inverted (i.e. top is 0%, bottom is 100%)
 invert_sliders: true

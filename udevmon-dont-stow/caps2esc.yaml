@@ -1,0 +1,13 @@
+- CMD: mux -c caps2esc -c keyboard -c mouse
+- JOB:
+    - mux -i caps2esc | caps2esc | mux -o keyboard -o mouse
+    - mux -i keyboard | uinput -c /etc/interception/keyboard.yaml
+    - mux -i mouse | uinput -c /etc/interception/mouse.yaml
+- JOB: intercept -g $DEVNODE | mux -o caps2esc
+  DEVICE:
+    LINK: /dev/input/by-id/usb-0416_Gaming_Keyboard-event-kbd    
+- JOB: intercept -g $DEVNODE | mux -o caps2esc
+  DEVICE:
+    LINK: /dev/input/by-id/usb-Razer_Razer_Viper_Mini-event-mouse
+
+# muxing keyboard and mouse separately cause if combined acceleration setting no worky

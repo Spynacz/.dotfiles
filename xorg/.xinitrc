@@ -33,8 +33,8 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 xsetroot -cursor_name left_ptr &
-setxkbmap -option ctrl:swapcaps
-xcape -e 'Control_L=Escape'
+# setxkbmap -option ctrl:swapcaps
+# xcape -e 'Control_L=Escape'
 
 sxhkd &
 betterlockscreen -l &

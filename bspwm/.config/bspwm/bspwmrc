@@ -53,8 +53,8 @@ bspc rule -a Blueman-manager state=floating
 
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
-setxkbmap -option ctrl:swapcaps
-xcape -e 'Control_L=Escape'
+# setxkbmap -option ctrl:swapcaps
+# xcape -e 'Control_L=Escape' -t 150
 
 xsetroot -cursor_name left_ptr
 
