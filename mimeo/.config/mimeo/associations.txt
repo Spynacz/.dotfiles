@@ -1,0 +1,2 @@
+/home/mateusz/.local/bin/PureRef-1.11.1_x64_74e6205e99ce0560c32f27340d45d1ad.Appimage
+  \.pur$
