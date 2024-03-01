@@ -8,6 +8,9 @@ alias sudo="sudo "
 alias vim="nvim"
 alias v="vim"
 
+# Open files
+alias open="mimeo"
+
 # Systemctl aliases
 alias sds="systemctl start"
 alias sdr="systemctl restart"
