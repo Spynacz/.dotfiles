@@ -19,5 +19,13 @@ if [ -d "$selected" ]; then
 elif [ -f "$selected" ]; then
     selected_dir=$(dirname "$selected")
     kitty @ focus-tab --match "title:^$selected_name$" ||
-        kitty @ launch --type=tab --cwd="$selected_dir" --title="$selected_name" nvim "$selected" 
+        mime=$(mimeo --mimetype "$selected" | awk 'FNR == 2 {print $1}')
+        desktop=$(mimeo --mime2desk "$mime" | awk 'FNR == 2 {print $1}')
+        deskpath=$(mimeo --finddesk "$desktop" | head -n 1)
+        term=$(grep "Terminal=true" "$deskpath")
+        if [ $term ]; then
+            kitty @ launch --type=tab --cwd="$selected_dir" --title="$selected_name" mimeo "$selected"
+        else
+            kitty @ launch --type=background mimeo "$selected" 
+        fi
 fi
