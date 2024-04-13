@@ -1,0 +1,6 @@
+layout tall:bias=70
+cd ~/Dev/TMG/front/frontend
+launch --title 'vim' nvim
+launch --title 'frontend exec' npm run dev
+cd ~/Dev/TMG/front
+launch --title 'backend exec' mvn spring-boot:run
