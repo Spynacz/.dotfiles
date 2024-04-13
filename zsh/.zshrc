@@ -21,19 +21,24 @@ setopt AUTO_PUSHD
 setopt PUSHD_IGNORE_DUPS
 setopt PUSHD_SILENT
 
+fpath=($ZSH $fpath)
+
 autoload -U colors && colors
 
 # Completion
 autoload -U compinit && compinit
 _comp_options+=(globdots)
 
-
 ### PLUGINS
 source $ZSH/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
 source $ZSH/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-fpath=($ZSH/plugins/zsh-completions/src $fpath)
+# fpath=($ZSH/plugins/zsh-completions/src $fpath)
+
+# ...(and more) dots expanding to ../../
+autoload -Uz manydots-magic
+manydots-magic
 
 source $ZSH/plugins/git-prompt.zsh/git-prompt.zsh
 

@@ -16,7 +16,7 @@ export LIBVA_DRIVER_NAME=nvidia
 export NVD_BACKEND=direct
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export WLR_NO_HARDWARE_CURSORS=1
-export QT_QPA_PLATFORMTHEME=qt5ct
+export QT_QPA_PLATFORMTHEME=qt6ct
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 #export PYENV_ROOT=$HOME/.pyenv
