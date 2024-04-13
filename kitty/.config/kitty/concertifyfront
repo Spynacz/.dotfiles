@@ -1,0 +1,4 @@
+layout tall:bias=70
+cd ~/Dev/concertify/frontend/frontend/
+launch --title 'vim' --hold nvim
+launch --title 'exec' docker compose up 
