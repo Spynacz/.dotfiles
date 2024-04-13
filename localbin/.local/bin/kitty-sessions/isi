@@ -1,0 +1,5 @@
+#!/bin/bash
+
+kitty --session concertifyfront
+
+# why a single line script instead of an alias? because rofi
