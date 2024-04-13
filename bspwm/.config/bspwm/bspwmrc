@@ -6,7 +6,9 @@ xrandr --output DP-0 --mode 1920x1080 --rate 144 --pos 0x0 --rotate left
 
 wmname LG3D
 
-xset dpms 0 0 0 s off
+xset dpms 0 0 0
+xset -dpms
+xset s 0 0 
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
@@ -67,7 +69,7 @@ compfy --daemon &
 # pgrep bspswallow || bspswallow &
 
 #shuf -e -n 1 $HOME/.wallpapers/Custom/* | xargs feh --no-fehbg --bg-fill &
-feh --no-fehbg --bg-fill $HOME/.wallpapers/pixel-art-pagoda.png
+feh --no-fehbg --bg-fill $HOME/.wallpapers/pixel-art-stargazing.png
 killall dunst
 dunst &
 
@@ -92,7 +94,7 @@ pgrep deej || deej -c /home/mateusz/.config/deej/config.yaml &
 playerctld &
 
 killall xidlehook
-xidlehook --not-when-audio --not-when-fullscreen --timer 500 'betterlockscreen -l' ''
+xidlehook --not-when-audio --not-when-fullscreen --timer 300 'xset s activate' '' --timer 500 'betterlockscreen -l' ''
 #--timer 300 'systemctl suspend' '' &
 
 discord --start-minimized &
