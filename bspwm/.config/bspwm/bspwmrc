@@ -73,6 +73,9 @@ xsetroot -cursor_name left_ptr
 xinput set-prop "GXTP7863:00 27C6:01E0 Touchpad" "libinput Natural Scrolling Enabled Default" 1
 xinput set-prop "GXTP7863:00 27C6:01E0 Touchpad" "libinput Natural Scrolling Enabled" 1
 
+xinput set-prop "GXTP7863:00 27C6:01E0 Touchpad" "libinput Tapping Drag Lock Enabled Default" 1
+xinput set-prop "GXTP7863:00 27C6:01E0 Touchpad" "libinput Tapping Drag Lock Enabled" 1
+
 killall polybar
 polybar -r main &
 polybar -r second &

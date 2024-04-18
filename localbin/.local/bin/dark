@@ -3,6 +3,7 @@
 kvantummanager --set Catppuccin-Mocha-Flamingo
 
 cp $HOME/.config/qt5ct/colors/Catppuccin-Mocha.conf $HOME/.config/qt5ct/colors/current-theme.conf
+cp $HOME/.config/qt6ct/colors/Catppuccin-Mocha.conf $HOME/.config/qt6ct/colors/current-theme.conf
 
 gsettings set org.gnome.desktop.interface gtk-theme Catppuccin-Mocha-Standard-Flamingo-Dark
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
