@@ -56,7 +56,7 @@ super + d
     discord && bspc desktop --focus 10 && bspc desktop --focus last
 
 super + e
-    thunar
+    dolphin  
 
 super + s
     spotify && bspc desktop --focus 10 && bspc desktop --focus last
