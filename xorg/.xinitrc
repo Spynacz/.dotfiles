@@ -36,6 +36,10 @@ xsetroot -cursor_name left_ptr &
 # setxkbmap -option ctrl:swapcaps
 # xcape -e 'Control_L=Escape'
 
+xset dpms 0 0 0
+xset s off -dpms
+xset s 0 0 
+
 sxhkd &
 betterlockscreen -l &
 exec bspwm

@@ -6,10 +6,6 @@ xrandr --output DP-0 --mode 1920x1080 --rate 144 --pos 0x0 --rotate left
 
 wmname LG3D
 
-xset dpms 0 0 0
-xset -dpms
-xset s 0 0 
-
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 bspc wm -O HDMI-0 DP-0
@@ -58,13 +54,14 @@ bspc rule -a Blueman-manager state=floating
 # setxkbmap -option ctrl:swapcaps
 # xcape -e 'Control_L=Escape' -t 150
 
-xsetroot -cursor_name left_ptr
+# xsetroot -cursor_name left_ptr
 
 killall polybar
 polybar -r main &
 polybar -r second &
 
 compfy --daemon &
+# picom --daemon &
 
 # pgrep bspswallow || bspswallow &
 
@@ -92,6 +89,8 @@ kdeconnect-battery.sh &
 pgrep deej || deej -c /home/mateusz/.config/deej/config.yaml &
 
 playerctld &
+
+# blueman-applet &
 
 killall xidlehook
 xidlehook --not-when-audio --not-when-fullscreen --timer 300 'xset s activate' '' --timer 500 'betterlockscreen -l' ''

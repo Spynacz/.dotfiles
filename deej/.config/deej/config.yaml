@@ -12,9 +12,7 @@ slider_mapping:
     - vlc
     - mpv
     - elisa
-    - lollypop
-    - python3.9
-    - python3.11
+    - python3.12 #lollypop
     - stremio
     - tidal-hifi
     - plexmediaplayer
@@ -24,13 +22,13 @@ slider_mapping:
     - amberol
     - mpd
   1:
-    - teams
     # - firefox
     - Firefox_virtual
     - brave 
   2: # mostly games
     - deej.current
     - playstation
+    - runner # undertale? steam something? idk
     # - witcher2
     # - wine64-preloader
     # - java
@@ -44,6 +42,8 @@ slider_mapping:
     # - witcher3.exe
   3:
     - discord
+    - zoom
+    - teams
   4: master
   5: firefox # doesn't exist, but prevents deej.current from changing firefox
 
