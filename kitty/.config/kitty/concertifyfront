@@ -1,6 +1,0 @@
-layout tall:bias=70
-cd ~/Dev/concertify/front/frontend
-launch --title 'vim' --hold nvim
-launch --title 'react' --hold docker compose up frontend --detach
-cd ~/Dev/concertify/back
-launch --title 'django' --hold docker compose up backend database --detach
