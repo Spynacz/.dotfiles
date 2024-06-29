@@ -5,8 +5,13 @@ kvantummanager --set Catppuccin-Latte-Flamingo
 cp $HOME/.config/qt5ct/colors/Catppuccin-Latte.conf $HOME/.config/qt5ct/colors/current-theme.conf
 cp $HOME/.config/qt6ct/colors/Catppuccin-Latte.conf $HOME/.config/qt6ct/colors/current-theme.conf
 
-gsettings set org.gnome.desktop.interface gtk-theme Catppuccin-Latte-Standard-Flamingo-Light
-gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
+sed -i s/Catppuccin-Mocha-Standard-Flamingo-Dark/Catppuccin-Latte-Standard-Flamingo-Light/ ~/.config/xsettingsd/xsettingsd.conf
+sed -i s/Catppuccin-Mocha-Flamingo-Cursors/Catppuccin-Latte-Flamingo-Cursors/ ~/.config/xsettingsd/xsettingsd.conf
+killall -HUP xsettingsd
+
+# gsettings work only on wayland (probably...)
+# gsettings set org.gnome.desktop.interface gtk-theme Catppuccin-Latte-Standard-Flamingo-Light
+# gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
 
 kitty +kitten themes --reload-in=all Catppuccin-Latte
 
@@ -18,4 +23,4 @@ kitty +kitten themes --reload-in=all Catppuccin-Latte
 cp $HOME/.config/polybar/themes/latte.ini $HOME/.config/polybar/current-theme.ini
 # killall polybar && polybar -r main &
 
-echo "vim.opt.background = 'light'" > $HOME/.config/nvim/lua/spynacz/theme.lua
+sed -i s/dark/light/ $HOME/.config/nvim/lua/spynacz/theme.lua

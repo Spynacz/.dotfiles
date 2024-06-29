@@ -3,10 +3,15 @@
 kvantummanager --set Catppuccin-Mocha-Flamingo
 
 cp $HOME/.config/qt5ct/colors/Catppuccin-Mocha.conf $HOME/.config/qt5ct/colors/current-theme.conf
-cp $HOME/.config/qt6ct/colors/Catppuccin-Mocha.conf $HOME/.config/qt6ct/colors/current-theme.conf
+cp $HOME/.config/qt6ct/colors/Catppuccin-Mocha.conf $HOME/.config/qt5ct/colors/current-theme.conf
 
-gsettings set org.gnome.desktop.interface gtk-theme Catppuccin-Mocha-Standard-Flamingo-Dark
-gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+sed -i s/Catppuccin-Latte-Standard-Flamingo-Light/Catppuccin-Mocha-Standard-Flamingo-Dark/ ~/.config/xsettingsd/xsettingsd.conf
+sed -i s/Catppuccin-Latte-Flamingo-Cursors/Catppuccin-Mocha-Flamingo-Cursors/ ~/.config/xsettingsd/xsettingsd.conf
+killall -HUP xsettingsd
+
+# gsettings work only on wayland (probably...)
+# gsettings set org.gnome.desktop.interface gtk-theme Catppuccin-Mocha-Standard-Flamingo-Dark
+# gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
 kitty +kitten themes --reload-in=all Catppuccin-Mocha
 
@@ -18,4 +23,4 @@ kitty +kitten themes --reload-in=all Catppuccin-Mocha
 cp $HOME/.config/polybar/themes/mocha.ini $HOME/.config/polybar/current-theme.ini
 # killall polybar && polybar -r main &
 
-echo "vim.opt.background = 'dark'" > $HOME/.config/nvim/lua/spynacz/theme.lua
+sed -i s/light/dark/ $HOME/.config/nvim/lua/spynacz/theme.lua
