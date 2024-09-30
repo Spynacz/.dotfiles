@@ -20,27 +20,38 @@ XF86Calculator
 
 # F4
 XF86Tools
+    betterlockscreen -l
     
 
 # █▄ ▄█ ██▀ █▀▄ █ ▄▀▄
 # █ ▀ █ █▄▄ █▄▀ █ █▀█
 # Media
 
+#<F5> 
 XF86AudioPlay
     playerctl play-pause
 
+#<F6>
 XF86AudioPrev
     playerctl previous
 
+#<F7>
 XF86AudioNext
     playerctl next
 
+#<F8>
+XF86AudioStop
+    playerctl stop
+
+#<F9>
 XF86AudioMute
     pactl set-sink-mute @DEFAULT_SINK@ toggle
 
+#<F10>
 XF86AudioLowerVolume
     pactl set-sink-volume @DEFAULT_SINK@ -5%
 
+#<F11>
 XF86AudioRaiseVolume
     pactl set-sink-volume @DEFAULT_SINK@ +5%
 
@@ -60,13 +71,15 @@ super + {_,shift} + b
 #     obsidian
 
 super + d
-    discord && bspc desktop --focus 10 && bspc desktop --focus last
+    discord
+    # discord && bspc desktop --focus 10 && bspc desktop --focus last
 
 super + e
     dolphin
 
 super + s
-    spotify && bspc desktop --focus 10 && bspc desktop --focus last
+    spotify
+    # spotify && bspc desktop --focus 10 && bspc desktop --focus last
 
 #super + c
 #    jellyfinmediaplayer

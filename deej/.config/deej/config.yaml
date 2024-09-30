@@ -21,6 +21,7 @@ slider_mapping:
     - plex-bin
     - amberol
     - mpd
+    - cmus
   1:
     # - firefox
     - Firefox_virtual

@@ -1,10 +1,8 @@
 #! /bin/sh
 
 # bspwm-monitors.sh
-xrandr --output HDMI-0 --primary --mode 2560x1440 --rate 144 --pos 1080x180
+xrandr --output HDMI-0 --primary --mode 2560x1440 --rate 144 --pos 1080x250
 xrandr --output DP-0 --mode 1920x1080 --rate 144 --pos 0x0 --rotate left
-
-wmname LG3D
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
@@ -30,7 +28,7 @@ bspc config window_gap           5
 bspc config automatic_scheme	 alternate
 bspc config split_ratio          0.5
 bspc config borderless_monocle   true
-bspc config gapless_monocle      false
+bspc config gapless_monocle      true
 
 bspc config focus_follows_pointer false
 bspc config pointer_motion_interval 7ms
@@ -66,7 +64,7 @@ compfy --daemon &
 # pgrep bspswallow || bspswallow &
 
 #shuf -e -n 1 $HOME/.wallpapers/Custom/* | xargs feh --no-fehbg --bg-fill &
-feh --no-fehbg --bg-fill $HOME/.wallpapers/pixel-art-stargazing.png
+feh --no-fehbg --bg-fill $HOME/.wallpapers/wall/forest-fall-2560×1440.jpg --bg-fill --geometry +1350+0 $HOME/.wallpapers/wall/forest-fall-2560×1440.jpg
 killall dunst
 dunst &
 
@@ -82,7 +80,7 @@ pulseeffects --gapplication-service &
 
 #xfce4-power-manager &
 
-/usr/lib/kdeconnectd &
+/usr/bin/kdeconnectd &
 kdeconnect-indicator &
 kdeconnect-battery.sh &
 
@@ -93,7 +91,8 @@ playerctld &
 # blueman-applet &
 
 killall xidlehook
-xidlehook --not-when-audio --not-when-fullscreen --timer 300 'xset s activate' '' --timer 500 'betterlockscreen -l' ''
+# xidlehook --not-when-fullscreen --timer 300 'betterlockscreen -l --off 300' '' &
+#--timer 600 'xset s activate' '' &
 #--timer 300 'systemctl suspend' '' &
 
 discord --start-minimized &
