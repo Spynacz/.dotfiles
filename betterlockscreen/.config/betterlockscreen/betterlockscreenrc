@@ -4,7 +4,8 @@
 display_on=0
 span_image=false
 lock_timeout=300
-fx_list=(dim blur dimblur pixel dimpixel color)
+# fx_list=(dim blur dimblur pixel dimpixel color)
+fx_list=()
 dim_level=40
 blur_level=1
 pixel_scale=10,1000
@@ -13,25 +14,29 @@ wallpaper_cmd="feh --bg-fill"
 quiet=false
 # i3lockcolor_bin="i3lock-color" # Manually set command for i3lock-color
 
+# green 307A5F
+# orange F7542F
+# beige AD9EA5
+
 # default theme
-loginbox=1e1e2e66
+loginbox=00000050
 loginshadow=00000000
-locktext="Type password to unlock..."
+locktext=""
 font="IBM Plex Sans"
-ringcolor=1e1e2eff
+ringcolor=AD9EA5f9
 insidecolor=00000000
 separatorcolor=00000000
-ringvercolor=ffffffff
+ringvercolor=AD9EA5f9
 insidevercolor=00000000
-ringwrongcolor=ffffffff
-insidewrongcolor=d23c3dff
+ringwrongcolor=AD9EA5f9
+insidewrongcolor=F75430f9
 timecolor=cdd6f4ff
 time_format="%H:%M:%S"
 greetercolor=ffffffff
 layoutcolor=ffffffff
-keyhlcolor=d23c3dff
-bshlcolor=d23c3dff
-verifcolor=ffffffff
-wrongcolor=d23c3dff
-modifcolor=f38ba8ff
+keyhlcolor=307A5Fff
+bshlcolor=F7542Fff
+verifcolor=307A5Fff
+wrongcolor=F7542Fff
+modifcolor=307A5Fff
 bgcolor=000000ff

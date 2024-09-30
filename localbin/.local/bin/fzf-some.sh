@@ -6,7 +6,9 @@ export FZF_DEFAULT_OPTS=" \
 
 position="down"
 
-selected=$(fd . ~ ~/Dev ~/Dev/Java ~/Documents ~/Documents/RPG ~/Documents/RPG/DND ~/Documents/Studia/Semestr* ~/Documents/Studia --exact-depth 1 --type d | fzf +m)
+selected=$(fd . ~ ~/Dev ~/Dev/Java ~/Documents ~/Documents/RPG ~/Documents/RPG/DND\
+    ~/Documents/Studia/Semestr* ~/Documents/Studia --exact-depth 1 --type d\
+    | fzf +m --preview 'bat --color=always {}' --preview-window='~3')
 
 if [ -z "$selected" ]; then
     exit 0
