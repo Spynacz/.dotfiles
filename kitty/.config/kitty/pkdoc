@@ -1,0 +1,6 @@
+layout tall:bias=70
+cd ~/Dev/pkdoc/master/frontend
+launch --title 'vim' --hold nvim
+launch --title 'vite' --hold npm run dev
+cd ~/Dev/pkdoc/master/papers
+launch --title 'spring' --hold mvn spring-boot:run

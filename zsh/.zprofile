@@ -1,4 +1,5 @@
 export EDITOR=nvim
+export OPENER=mimeo
 export TERM=kitty
 export BROWSER=firefox
 export GTK_USE_PORTAL=1
