@@ -1,0 +1,1 @@
+nvidia-settings -a CurrentMetaMode="DPY-2: 2560x1440_144 @1280x960 +1080+480 {ViewPortIn=1280x960, ViewPortOut=2560x1440+0+0, ForceCompositionPipeline=On}, DPY-3: 1920x1080_144 @1080x1920 +0+0 {ViewPortIn=1080x1920, ViewPortOut=1920x1080+0+0, Rotation=90, ForceCompositionPipeline=On}"

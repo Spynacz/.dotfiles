@@ -39,8 +39,8 @@ bspc rule -r '*'
 
 # bspc rule -a Steam state=floating
 bspc rule -a Zotero state=floating center=on
-bspc rule -a discord desktop=10 split_dir=south split_ratio=0.35 follow=on
-bspc rule -a Spotify desktop=10 split_dir=north split_ratio=0.35 private=on follow=on
+bspc rule -a discord desktop=10 split_dir=south split_ratio=0.38 follow=on
+bspc rule -a Spotify desktop=10 split_dir=north split_ratio=0.38 private=on follow=on
 bspc rule -a Pavucontrol state=floating
 #bspc rule -a obsidian desktop=^10 follow=off locked=on
 bspc rule -a firefox desktop focused:'^1' follow=on
