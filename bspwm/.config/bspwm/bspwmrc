@@ -80,7 +80,7 @@ killall polybar
 polybar -r main &
 polybar -r second &
 
-compfy --daemon &
+picom --daemon &
 xsettingsd &
 
 # pgrep bspswallow || bspswallow &
