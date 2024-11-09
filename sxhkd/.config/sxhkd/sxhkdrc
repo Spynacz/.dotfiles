@@ -55,6 +55,9 @@ XF86AudioLowerVolume
 XF86AudioRaiseVolume
     pactl set-sink-volume @DEFAULT_SINK@ +5%
 
+Pause
+    playerctl play-pause
+
 
 # █   ▄▀▄ █ █ █▄ █ ▄▀▀ █▄█ ██▀ █▀▄ ▄▀▀
 # █▄▄ █▀█ ▀▄█ █ ▀█ ▀▄▄ █ █ █▄▄ █▀▄ ▄██
@@ -116,6 +119,9 @@ super + shift + x
 
 super + v
     copyq show
+
+ctrl + alt + v
+    ~/.vim-anywhere/bin/run
 
 
 # make sxhkd reload its configuration files:

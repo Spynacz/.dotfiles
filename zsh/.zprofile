@@ -6,6 +6,7 @@ export GTK_USE_PORTAL=1
 export PATH=$PATH:$HOME/.spicetify
 export PATH=$PATH:/opt/android-sdk/platform-tools
 export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/.local/bin/*
 export PATH=$PATH:$HOME/.local/bin/kitty-sessions
 export PATH=$PATH:$HOME/.local/bin/subtitles
 export GOPATH=$HOME/Dev/go

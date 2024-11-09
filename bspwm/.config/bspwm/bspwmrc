@@ -58,8 +58,8 @@ killall polybar
 polybar -r main &
 polybar -r second &
 
-compfy --daemon &
-# picom --daemon &
+# compfy --daemon &
+picom --daemon &
 
 # pgrep bspswallow || bspswallow &
 

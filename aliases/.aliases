@@ -33,6 +33,7 @@ alias s="vim $HOME/.config/sxhkd/sxhkdrc"
 # alias kzbass="pulseeffects -l \"KZ ZSN AutoIEF bass\""
 
 alias la="ls -Alh"
+alias ll="ls -lh"
 
 alias d="dirs -v"
 for index ({1..9}) alias "$index"="cd +${index}"; unset index
@@ -51,6 +52,7 @@ alias gm="git merge"
 alias gcp="git cherry-pick"
 alias gr="git restore"
 alias grs="git restore --staged"
+alias gd="git diff"
 
 alias gwa="git worktree add"
 alias gwr="git worktree remove"
