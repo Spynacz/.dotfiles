@@ -66,6 +66,3 @@ alias condify="source $HOME/.conda.zshrc && conda activate"
 
 # kitty
 alias icat="kitten icat"
-
-# hotspot
-alias spynacz="nmcli con up Spynacz"
