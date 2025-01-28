@@ -2,7 +2,7 @@
 
 DEVICE_ID=1d5da35be189b1ef
 LOW_BATTERY=30
-HIGH_BATTERY=80
+HIGH_BATTERY=82
 
 is_charging=$(qdbus org.kde.kdeconnect.daemon /modules/kdeconnect/devices/"$DEVICE_ID"/battery org.kde.kdeconnect.device.battery.isCharging)
 device_name=$(qdbus org.kde.kdeconnect /modules/kdeconnect/devices/"$DEVICE_ID" org.kde.kdeconnect.device.name)

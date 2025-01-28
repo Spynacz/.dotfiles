@@ -62,6 +62,8 @@ HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND=none
 
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+bindkey -M vicmd '^P' history-substring-search-up
+bindkey -M vicmd '^N' history-substring-search-down
 
 
 ### PROMPT

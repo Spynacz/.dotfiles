@@ -4,6 +4,9 @@ alias dotfiles='/usr/bin/git --git-dir=/home/mateusz/.dotfiles/ --work-tree=/hom
 # Make sudo work with aliases
 alias sudo="sudo "
 
+# YEET the packages (with dependencies too)
+alias yeet="yay -Rs"
+
 # Neovim to Vim 
 alias vim="nvim"
 alias v="vim"
@@ -64,3 +67,4 @@ alias studia="cd $HOME/Documents/Studia"
 
 # kitty
 alias icat="kitten icat"
+[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
