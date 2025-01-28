@@ -196,7 +196,7 @@ super + {o,i}
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}' --follow
+	bspc {desktop -f,node -d} '{1-9,10}' --follow
 
 # send to the given desktop and don't focus
 super + ctrl + {1-9,0}
