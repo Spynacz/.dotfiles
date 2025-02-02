@@ -70,6 +70,8 @@ feh --no-fehbg --bg-fill $HOME/.wallpapers/wall/in-the-early-morning-of-forest-3
 killall dunst
 dunst &
 
+systemd-timer-notify &
+
 #copyq &
 
 redshift -x && redshift &

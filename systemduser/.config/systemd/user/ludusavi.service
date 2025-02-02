@@ -1,0 +1,7 @@
+[Unit]
+Description="Ludusavi backup"
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStart=/usr/bin/ludusavi backup --force

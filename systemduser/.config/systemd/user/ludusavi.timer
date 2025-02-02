@@ -1,0 +1,11 @@
+[Unit]
+Description="Ludusavi backup timer"
+
+[Timer]
+OnCalendar=weekly
+Persistent=true
+Unit=ludusavi.service
+
+[Install]
+WantedBy=timers.target
+
