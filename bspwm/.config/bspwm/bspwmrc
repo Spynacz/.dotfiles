@@ -19,8 +19,8 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 
 bspwm-monitors.sh
 
-#bspc monitor eDP -d 1 2 3 4 5
-#bspc monitor HDMI-A-0 -d 6 7 8 9 10
+bspc monitor eDP -d 1 2 3 4 5
+bspc monitor HDMI-A-0 -d 6 7 8 9 10
 
 # bspc desktop 1 -l monocle
 # bspc desktop 2 -l monocle
@@ -94,6 +94,8 @@ killall dunst
 dunst &
 
 pgrep redshift || redshift &
+
+easyeffects --gapplication-service &
 
 #xfce4-power-manager &
 

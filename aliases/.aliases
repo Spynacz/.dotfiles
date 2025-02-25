@@ -4,6 +4,8 @@ alias dotfiles='/usr/bin/git --git-dir=/home/mateusz/.dotfiles/ --work-tree=/hom
 # Make sudo work with aliases
 alias sudo="sudo "
 
+alias yeet="yay -Rs"
+
 # Neovim to Vim 
 alias vim="nvim"
 alias v="vim"

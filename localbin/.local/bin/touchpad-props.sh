@@ -1,7 +1,6 @@
 #!/bin/bash
 
 if [ "$1" = "" ]; then 
-    echo "dsaf"
     exit 1
 fi
 
