@@ -1,0 +1,62 @@
+# process names are case-insensitive
+# you can use 'master' to indicate the master channel, or a list of process names to create a group
+# you can use 'mic' to control your mic input level (uses the default recording device)
+# you can use 'deej.unmapped' to control all apps that aren't bound to any slider (this ignores master, system, mic and device-targeting sessions) (experimental)
+# you can use 'deej.current' to control the currently active app (whether full-screen or not) (experimental)
+# you can use a device's full name, i.e. "Speakers (Realtek High Definition Audio)", to bind it. this works for both output and input devices
+# windows only - you can use 'system' to control the "system sounds" volume
+# important: slider indexes start at 0, regardless of which analog pins you're using!
+slider_mapping:
+  0: # media apps
+    - spotify
+    - vlc
+    - mpv
+    - elisa
+    - python3.12 #lollypop
+    - stremio
+    - tidal-hifi
+    - plexmediaplayer
+    - plex
+    - jellyfinmediaplayer
+    - plex-bin
+    - amberol
+    - mpd
+    - cmus
+  1:
+    # - firefox
+    - firefox_virtual-out
+    - brave 
+  2: # mostly games
+    - deej.current
+    - playstation
+    - runner # undertale? steam something? idk
+    # - java
+    # - witcher2
+    # - wine64-preloader
+    # - csgo_linux64
+    # - heroes3
+    # - deadcells
+    # - wine-preloader
+    # - hollow_knight.x86_64
+    # - rpcs3
+    # - r5apex.exe
+    # - witcher3.exe
+  3:
+    - discord
+    - zoom
+    - teams
+  4: master
+  5: firefox # doesn't exist, but prevents deej.current from changing firefox provided current_ignore_mapped is true
+
+# set this to true if you want the controls inverted (i.e. top is 0%, bottom is 100%)
+invert_sliders: true
+
+# settings for connecting to the arduino board
+com_port: /dev/deej
+baud_rate: 9600
+
+# set percentage points increment to use when changing volume
+volume_step: 1
+
+# whether to change volume of current window if it's also explicitly mapped elsewhere
+current_ignore_mapped: true 

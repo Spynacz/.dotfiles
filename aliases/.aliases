@@ -11,7 +11,7 @@ alias vim="nvim"
 alias v="vim"
 
 # Open files
-alias open="mimeo"
+alias open="xdg-open"
 
 # Systemctl aliases
 alias sds="systemctl start"

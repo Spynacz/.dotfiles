@@ -38,4 +38,4 @@ xsetroot -cursor_name left_ptr &
 
 sxhkd &
 betterlockscreen -l &
-exec bspwm
+exec bspwm 

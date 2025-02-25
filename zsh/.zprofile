@@ -18,13 +18,16 @@ export LIBVA_DRIVER_NAME=nvidia
 export NVD_BACKEND=direct
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export WLR_NO_HARDWARE_CURSORS=1
-export QT_QPA_PLATFORMTHEME=qt6ct
 export _JAVA_AWT_WM_NONREPARENTING=1
+export QT_QPA_PLATFORMTHEME=qt6ct
+
+# fix dolphin open with dialog being empty
+export XDG_MENU_PREFIX=arch-
 
 export PYENV_ROOT=$HOME/.pyenv
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-    exec startx
+    exec startx 
 fi

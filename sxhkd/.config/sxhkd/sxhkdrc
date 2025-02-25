@@ -2,6 +2,7 @@
 # █▄█ █▀▄ █ ▀▄█ █ █  █  █ ▀█ █▄▄ ▄██ ▄██
 # Brightness
 
+<<<<<<< HEAD
 XF86MonBrightnessDown
     brightnessctl set 5%-
 
@@ -46,7 +47,7 @@ Pause
 # Launchers
 
 super + t
-    kitty --single-instance
+    kitty #--single-instance
 
 super + {_,shift} + b
     GDK_DPI_SCALE=1.1 firefox {_,--private-window}
@@ -87,6 +88,12 @@ ctrl + Print
 
 ctrl + shift + Pause
     $HOME/.local/bin/fan-auto
+
+ctrl + shift + Print
+    killall deej; deej -c $HOME/.config/deej/config.yaml
+
+ctrl + shift + Delete
+    nmcli con down Wired && sleep 2 && nmcli con up Wired
 
 super + shift + x
     xcolor -s

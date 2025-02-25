@@ -30,15 +30,11 @@ autoload -U compinit && compinit
 _comp_options+=(globdots)
 
 ### PLUGINS
-source $ZSH/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
 source $ZSH/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # fpath=($ZSH/plugins/zsh-completions/src $fpath)
 
-# ...(and more) dots expanding to ../../
-autoload -Uz manydots-magic
-manydots-magic
 
 source $ZSH/plugins/git-prompt.zsh/git-prompt.zsh
 
@@ -60,9 +56,15 @@ source $ZSH/plugins/zsh-history-substring-search.zsh
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=none
 HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND=none
 
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
+# Syntax highlighting
+# IMPORTANT - must be the last plugin
+# not-fast doesn't work with manydots, idk why
+# source $ZSH/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $ZSH/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
+# ...(and more) dots expanding to ../../
+autoload -Uz manydots-magic
+manydots-magic
 
 ### PROMPT
 ZSH_THEME_GIT_PROMPT_PREFIX="("
@@ -110,6 +112,11 @@ source ${ZDOTDIR:-$HOME}/.zkbd/zsh-:0
 [[ -n ${key[Down]} ]] && bindkey "${key[Down]}" down-line-or-search
 [[ -n ${key[Right]} ]] && bindkey "${key[Right]}" forward-char
 
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+bindkey '^P' history-substring-search-up
+bindkey '^N' history-substring-search-down
+
 # now in kitty config to work also while in for ex. vim
 # fzf
 #source $HOME/.local/share/fzf/fzf-cd.sh
@@ -120,4 +127,3 @@ export FZF_DEFAULT_OPTS=" \
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
 --color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
 --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
-

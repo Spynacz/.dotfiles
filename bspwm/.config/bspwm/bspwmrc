@@ -82,6 +82,8 @@ killall polybar
 polybar -r main &
 polybar -r second &
 
+# compfy --daemon &
+# killall picom
 picom --daemon &
 xsettingsd &
 
@@ -89,7 +91,6 @@ xsettingsd &
 
 #shuf -e -n 1 $HOME/.wallpapers/Custom/* | xargs feh --no-fehbg --bg-fill &
 feh --no-fehbg --bg-fill $HOME/.wallpapers/garrys-mod-train-fox_upscayl_4x_ultrasharp-2.0.1.jpg 
-
 killall dunst
 dunst &
 
