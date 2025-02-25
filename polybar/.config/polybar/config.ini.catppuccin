@@ -26,7 +26,7 @@
 #disabled = #707880
 
 [global/wm]
-include-file = $HOME/.config/polybar/everblush.ini
+include-file = $HOME/.config/polybar/mocha.ini
 
 [bar/main]
 monitor = HDMI-0
@@ -37,8 +37,8 @@ radius = 15
 
 ; dpi = 96
 
-background = ${colors.lightbackground}
-foreground = ${colors.white}
+background = ${colors.base}
+foreground = ${colors.text}
 
 line-size = 3pt
 
@@ -87,8 +87,8 @@ radius = 15
 
 ; dpi = 96
 
-background = ${colors.lightbackground}
-foreground = ${colors.white}
+background = ${colors.base}
+foreground = ${colors.text}
 
 line-size = 3pt
 
@@ -132,25 +132,25 @@ pin-workspaces = true
 reverse-scroll = true
 
 label-active = %name%
-label-active-background = ${colors.background}
-label-active-underline= ${colors.cyan}
+label-active-background = ${colors.crust}
+label-active-underline= ${colors.flamingo}
 label-active-padding = 1
 
 label-occupied = %name%
 label-occupied-padding = 1
 
 label-urgent = %name%
-label-urgent-background = ${colors.cyan}
+label-urgent-background = ${colors.flamingo}
 label-urgent-padding = 1
 
 label-empty = %name%
-label-empty-foreground = ${colors.background}
+label-empty-foreground = ${colors.crust}
 label-empty-padding = 1
 
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:100:...%
-format-foreground = ${colors.white}
+format-foreground = ${colors.text}
 
 [module/xwindow2]
 type = internal/xwindow
@@ -171,12 +171,12 @@ ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
 #format-volume-prefix = " "
-#format-volume-prefix-foreground = ${colors.magenta}
-format-volume-foreground = ${colors.magenta}
+#format-volume-prefix-foreground = ${colors.pink}
+format-volume-foreground = ${colors.pink}
 
 label-volume = %percentage%%
 label-muted = muted
-label-muted-foreground = ${colors.magenta}
+label-muted-foreground = ${colors.pink}
 
 click-right = pavucontrol
 
@@ -188,7 +188,7 @@ date = %H:%M:%S %Y-%m-%d
 date-alt = %H:%M
 
 label = %date%
-label-foreground = ${colors.white}
+label-foreground = ${colors.text}
 
 [module/date2]
 type = internal/date
@@ -198,7 +198,7 @@ date = %H:%M
 date-alt = %Y-%m-%d %H:%M:%S
 
 label = %date%
-label-foreground = ${colors.white}
+label-foreground = ${colors.text}
 
 [module/cpu-temp]
 type = internal/temperature
@@ -238,7 +238,7 @@ format-font = 3
 [module/dunst]
 type = custom/ipc
 initial = 1
-format-foreground = ${colors.yellow}
+format-foreground = ${colors.peach}
 format-font = 3
 
 hook-0 = echo "%{A3:dunstctl set-paused true && polybar-msg action dunst hook 1:}%{A1:dunstctl history-pop:}%{A}%{A}" &
