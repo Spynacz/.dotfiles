@@ -24,15 +24,15 @@ slider_mapping:
     - cmus
   1:
     # - firefox
-    - Firefox_virtual
+    - firefox_virtual-out
     - brave 
   2: # mostly games
     - deej.current
     - playstation
     - runner # undertale? steam something? idk
+    # - java
     # - witcher2
     # - wine64-preloader
-    # - java
     # - csgo_linux64
     # - heroes3
     # - deadcells
@@ -46,7 +46,7 @@ slider_mapping:
     - zoom
     - teams
   4: master
-  5: firefox # doesn't exist, but prevents deej.current from changing firefox
+  5: firefox # doesn't exist, but prevents deej.current from changing firefox provided current_ignore_mapped is true
 
 # set this to true if you want the controls inverted (i.e. top is 0%, bottom is 100%)
 invert_sliders: true

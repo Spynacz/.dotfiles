@@ -4,15 +4,15 @@
 
 # F1
 XF86Explorer
-    ddcutil --bus 3 setvcp 10 - 10 --sleep-multiplier .1
+    ddcutil --bus 4 setvcp 10 - 10 --sleep-multiplier .1
 XF86MonBrightnessDown
-    ddcutil --bus 3 setvcp 10 - 10 --sleep-multiplier .1
+    ddcutil --bus 4 setvcp 10 - 10 --sleep-multiplier .1
 
 # F2
 XF86HomePage
-    ddcutil --bus 3 setvcp 10 + 10 --sleep-multiplier .1
+    ddcutil --bus 4 setvcp 10 + 10 --sleep-multiplier .1
 XF86MonBrightnessUp
-    ddcutil --bus 3 setvcp 10 + 10 --sleep-multiplier .1
+    ddcutil --bus 4 setvcp 10 + 10 --sleep-multiplier .1
 
 # F3
 XF86Calculator
@@ -64,7 +64,7 @@ Pause
 # Launchers
 
 super + t
-    kitty --single-instance
+    kitty #--single-instance
 
 super + {_,shift} + b
     firefox {_,--private-window}
@@ -109,7 +109,7 @@ ctrl + shift + Pause
     $HOME/.local/bin/fan-auto
 
 ctrl + shift + Print
-    killall deej && deej -c $HOME/.config/deej/config.yaml
+    killall deej; deej -c $HOME/.config/deej/config.yaml
 
 ctrl + shift + Delete
     nmcli con down Wired && sleep 2 && nmcli con up Wired

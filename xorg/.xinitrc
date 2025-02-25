@@ -42,4 +42,4 @@ xset s 0 0
 
 sxhkd &
 betterlockscreen -l &
-exec bspwm
+exec bspwm 

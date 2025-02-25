@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/sh
 
 # bspwm-monitors.sh
 xrandr --output HDMI-0 --primary --mode 2560x1440 --rate 144 --pos 1080x250
@@ -61,12 +61,14 @@ polybar -r main &
 polybar -r second &
 
 # compfy --daemon &
+# killall picom
 picom --daemon &
 
 # pgrep bspswallow || bspswallow &
 
 #shuf -e -n 1 $HOME/.wallpapers/Custom/* | xargs feh --no-fehbg --bg-fill &
-feh --no-fehbg --bg-fill $HOME/.wallpapers/wall/in-the-early-morning-of-forest-3840x2501.jpg #--bg-fill --geometry +1350+0 $HOME/.wallpapers/wall/forest-fall-2560×1440.jpg
+feh --no-fehbg --bg-fill $HOME/.wallpapers/forest-thom-milkovic.jpg
+#--bg-fill --geometry +1350+0 $HOME/.wallpapers/wall/forest-fall-2560×1440.jpg
 killall dunst
 dunst &
 
@@ -95,7 +97,7 @@ playerctld &
 
 # blueman-applet &
 
-killall xidlehook
+# killall xidlehook
 # xidlehook --not-when-fullscreen --timer 300 'betterlockscreen -l --off 300' '' &
 #--timer 600 'xset s activate' '' &
 #--timer 300 'systemctl suspend' '' &
