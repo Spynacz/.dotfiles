@@ -4,12 +4,15 @@ alias dotfiles='/usr/bin/git --git-dir=/home/mateusz/.dotfiles/ --work-tree=/hom
 # Make sudo work with aliases
 alias sudo="sudo "
 
+alias ip="ip -c"
+
 # YEET the packages (with dependencies too)
 alias yeet="yay -Rs"
 
 # Neovim to Vim 
 alias vim="nvim"
 alias v="vim"
+alias se="sudoedit"
 
 # Open files
 alias open="xdg-open"
