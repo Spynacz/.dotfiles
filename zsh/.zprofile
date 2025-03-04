@@ -24,10 +24,10 @@ export QT_QPA_PLATFORMTHEME=qt6ct
 # fix dolphin open with dialog being empty
 export XDG_MENU_PREFIX=arch-
 
-export PYENV_ROOT=$HOME/.pyenv
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# export PYENV_ROOT=$HOME/.pyenv
+# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
 
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-    exec startx 
+    exec Hyprland
 fi

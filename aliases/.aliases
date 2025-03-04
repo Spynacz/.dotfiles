@@ -4,7 +4,9 @@ alias dotfiles='/usr/bin/git --git-dir=/home/mateusz/.dotfiles/ --work-tree=/hom
 # Make sudo work with aliases
 alias sudo="sudo "
 
+alias h="nvim ~/.config/hypr/hyprland.conf"
 alias ip="ip -c"
+alias h="v ~/.config/hypr/hyprland.conf"
 
 # YEET the packages (with dependencies too)
 alias yeet="yay -Rs"
