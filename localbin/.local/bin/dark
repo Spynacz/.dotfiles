@@ -2,15 +2,17 @@
 
 # kvantummanager --set Catppuccin-Mocha-Flamingo
 
-cp $HOME/.config/qt5ct/colors/Catppuccin-Mocha.conf $HOME/.config/qt5ct/colors/current-theme.conf
+# cp $HOME/.config/qt5ct/colors/Catppuccin-Mocha.conf $HOME/.config/qt5ct/colors/current-theme.conf
 cp $HOME/.config/qt6ct/colors/Catppuccin-Mocha.conf $HOME/.config/qt6ct/colors/current-theme.conf
+
+sed -i s/BackgroundNormal=#eff1f5/BackgroundNormal=#1e1e2e/ ~/.config/kdeglobals
 
 # sed -i s/catppuccin-latte-flamingo-standard+default/catppuccin-mocha-flamingo-standard+default/ ~/.config/xsettingsd/xsettingsd.conf
 # sed -i s/Catppuccin-Latte-Flamingo-Cursors/Catppuccin-Mocha-Flamingo-Cursors/ ~/.config/xsettingsd/xsettingsd.conf
 # killall -HUP xsettingsd
 
 # gsettings work only with nwg-look
-gsettings set org.gnome.desktop.interface gtk-theme Catppuccin-Mocha-Standard-Flamingo-Dark
+gsettings set org.gnome.desktop.interface gtk-theme catppuccin-mocha-mauve-standard+default
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
 kitty +kitten themes --reload-in=all Catppuccin-Mocha
@@ -20,7 +22,10 @@ kitty +kitten themes --reload-in=all Catppuccin-Mocha
 
 #cp $HOME/.local/share/rofi/themes/.rasi $HOME/.local/share/rofi/themes/current-theme.rasi
 
-cp $HOME/.config/polybar/themes/mocha.ini $HOME/.config/polybar/current-theme.ini
+# cp $HOME/.config/polybar/themes/mocha.ini $HOME/.config/polybar/current-theme.ini
 # killall polybar && polybar -r main &
+
+sed -i 's#@import "latte.css"#@import "mocha.css"#g' ~/.config/waybar/style.css
+pkill -x waybar || true && waybar & disown
 
 sed -i s/light/dark/ $HOME/.config/nvim/lua/spynacz/theme.lua

@@ -20,6 +20,7 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export WLR_NO_HARDWARE_CURSORS=1
 export _JAVA_AWT_WM_NONREPARENTING=1
 export QT_QPA_PLATFORMTHEME=qt6ct
+export GRIMBLAST_EDITOR="satty -o %F_%T.png --filename"
 
 # fix dolphin open with dialog being empty
 export XDG_MENU_PREFIX=arch-

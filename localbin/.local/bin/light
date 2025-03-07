@@ -2,15 +2,17 @@
 
 # kvantummanager --set Catppuccin-Latte-Flamingo
 
-cp $HOME/.config/qt5ct/colors/Catppuccin-Latte.conf $HOME/.config/qt5ct/colors/current-theme.conf
+# cp $HOME/.config/qt5ct/colors/Catppuccin-Latte.conf $HOME/.config/qt5ct/colors/current-theme.conf
 cp $HOME/.config/qt6ct/colors/Catppuccin-Latte.conf $HOME/.config/qt6ct/colors/current-theme.conf
+
+sed -i s/BackgroundNormal=#1e1e2e/BackgroundNormal=#eff1f5/ ~/.config/kdeglobals
 
 # sed -i s/catppuccin-mocha-flamingo-standard+default/catppuccin-latte-flamingo-standard+default/ ~/.config/xsettingsd/xsettingsd.conf
 # sed -i s/Catppuccin-Mocha-Flamingo-Cursors/Catppuccin-Latte-Flamingo-Cursors/ ~/.config/xsettingsd/xsettingsd.conf
 # killall -HUP xsettingsd
 
 # gsettings work only with nwg-look
-gsettings set org.gnome.desktop.interface gtk-theme Catppuccin-Latte-Standard-Flamingo-Light
+gsettings set org.gnome.desktop.interface gtk-theme catppuccin-latte-mauve-standard+default
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
 
 kitty +kitten themes --reload-in=all Catppuccin-Latte
@@ -20,7 +22,10 @@ kitty +kitten themes --reload-in=all Catppuccin-Latte
 
 #cp $HOME/.local/share/rofi/themes/rose-pine-dawn.rasi $HOME/.local/share/rofi/themes/current-theme.rasi
 
-cp $HOME/.config/polybar/themes/latte.ini $HOME/.config/polybar/current-theme.ini
+# cp $HOME/.config/polybar/themes/latte.ini $HOME/.config/polybar/current-theme.ini
 # killall polybar && polybar -r main &
+
+sed -i 's#@import "mocha.css"#@import "latte.css"#g' ~/.config/waybar/style.css
+pkill -x waybar || true && waybar & disown
 
 sed -i s/dark/light/ $HOME/.config/nvim/lua/spynacz/theme.lua
