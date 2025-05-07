@@ -1,15 +1,20 @@
 #!/bin/sh
 
+PRIMARY=DisplayPort-0
+SECONDARY=DisplayPort-1
+
 # bspwm-monitors.sh
-xrandr --output HDMI-0 --primary --mode 2560x1440 --rate 144 --pos 1080x250
-xrandr --output DP-0 --mode 1920x1080 --rate 144 --pos 0x0 --rotate left
+xrandr --output $SECONDARY --mode 1920x1080 --rate 144 --pos 0x0 --rotate left
+xrandr --output $PRIMARY --primary --mode 2560x1440 --rate 165 --pos 1080x250
+# xrandr --output HDMI-0 --primary --mode 2560x1440 --rate 144 --pos 2160x500
+# xrandr --output DP-0 --scale 2x2 --rate 144 --pos 0x0 --rotate left
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc wm -O HDMI-0 DP-0
+bspc wm -O $PRIMARY $SECONDARY
 
-bspc monitor HDMI-0 -d 1 2 3 4 5
-bspc monitor DP-0 -d 6 7 8 9 10
+bspc monitor $PRIMARY -d 1 2 3 4 5
+bspc monitor $SECONDARY -d 6 7 8 9 10
 
 # bspc desktop 1 -l monocle
 # bspc desktop 2 -l monocle
@@ -41,8 +46,9 @@ bspc rule -r '*'
 
 # bspc rule -a Steam state=floating
 bspc rule -a Zotero state=floating center=on
-bspc rule -a discord desktop=10 split_dir=south split_ratio=0.38 follow=on
+bspc rule -a discord desktop=10 split_dir=south split_ratio=0.38 private=on follow=on
 bspc rule -a Spotify desktop=10 split_dir=north split_ratio=0.38 private=on follow=on
+bspc rule -a com.github.th_ch.youtube_music desktop=10 split_dir=north split_ratio=0.38 private=on follow=on
 bspc rule -a Pavucontrol state=floating
 #bspc rule -a obsidian desktop=^10 follow=off locked=on
 bspc rule -a firefox desktop focused:'^1' follow=on
@@ -52,6 +58,9 @@ bspc rule -a zenity state=floating
 bspc rule -a tag_studio.py:'Add Tags' state=floating
 
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+# fix xdg-desktop-portal-kde theming
+dbus-update-activation-environment --systemd --all
 
 # setxkbmap -option ctrl:swapcaps
 # xcape -e 'Control_L=Escape' -t 150
@@ -69,7 +78,7 @@ picom --daemon &
 # pgrep bspswallow || bspswallow &
 
 #shuf -e -n 1 $HOME/.wallpapers/Custom/* | xargs feh --no-fehbg --bg-fill &
-feh --no-fehbg --bg-fill $HOME/.wallpapers/forest-thom-milkovic.jpg
+feh --no-fehbg --bg-fill $HOME/.wallpapers/red-mountains.jpeg
 #--bg-fill --geometry +1350+0 $HOME/.wallpapers/wall/forest-fall-2560×1440.jpg
 killall dunst
 dunst &
@@ -100,9 +109,10 @@ playerctld &
 # blueman-applet &
 
 # killall xidlehook
-# xidlehook --not-when-fullscreen --timer 300 'betterlockscreen -l --off 300' '' &
-#--timer 600 'xset s activate' '' &
-#--timer 300 'systemctl suspend' '' &
+#xidlehook --not-when-fullscreen --timer 300 'betterlockscreen -l --off 300' '' & --timer 600 'xset s activate' '' & --timer 300 'systemctl suspend' '' &
+
+# should fix firefox opening dolphin with wrong theme
+dolphin --daemon &
 
 discord --start-minimized &
 

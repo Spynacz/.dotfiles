@@ -40,6 +40,8 @@ xset dpms 0 0 0
 xset s off -dpms
 xset s 0 0 
 
+export XDG_MENU_PREFIX=plasma-
+
 sxhkd &
 betterlockscreen -l &
-exec bspwm 
+exec ~/.local/bin/bspwm 

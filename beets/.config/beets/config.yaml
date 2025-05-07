@@ -1,0 +1,19 @@
+directory: ~/Music
+library: ~/Music/library.db
+
+import:
+  move: yes
+
+paths:
+  default: $albumartist/[$original_year] $album/$track. $title
+  singleton: $artist/$track. $title
+  comp: $albumartist/[$original_year] $album/$track. $title
+  albumtype:ep: $albumartist/[$original_year] $album [EP]/$track. $title
+
+plugins: fetchart embedart lyrics lastgenre the
+
+fetchart:
+  minwidth: 800
+
+lastgenre:
+  count: 3

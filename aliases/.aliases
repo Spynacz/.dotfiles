@@ -3,6 +3,7 @@ alias dotfiles='/usr/bin/git --git-dir=/home/mateusz/.dotfiles/ --work-tree=/hom
 
 # Make sudo work with aliases
 alias sudo="sudo "
+alias se="sudoedit"
 
 alias ip="ip -c"
 
@@ -13,6 +14,8 @@ alias yeet="yay -Rs"
 alias vim="nvim"
 alias v="vim"
 alias se="sudoedit"
+
+alias n="pnpm"
 
 # Open files
 alias open="xdg-open"
@@ -41,10 +44,13 @@ alias s="vim $HOME/.config/sxhkd/sxhkdrc"
 alias la="ls -Alh"
 alias ll="ls -lh"
 
+alias md="mkdir -p"
+
 alias d="dirs -v"
 for index ({1..9}) alias "$index"="cd +${index}"; unset index
 
 # Git
+alias g="git"
 alias gs="git status -sb"
 alias gc="git commit -ev"
 alias ga="git add"
@@ -55,6 +61,7 @@ alias gp="git push"
 alias gpl="git pull"
 alias gf="git fetch"
 alias gm="git merge"
+alias grb="git rebase"
 alias gcp="git cherry-pick"
 alias gr="git restore"
 alias grs="git restore --staged"

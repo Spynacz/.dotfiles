@@ -9,6 +9,7 @@
 slider_mapping:
   0: # media apps
     - spotify
+    - youtube-music
     - vlc
     - mpv
     - elisa
@@ -18,6 +19,7 @@ slider_mapping:
     - plexmediaplayer
     - plex
     - jellyfinmediaplayer
+    - Jellyfin Media Player
     - plex-bin
     - amberol
     - mpd
@@ -44,8 +46,10 @@ slider_mapping:
   3:
     - discord
     - zoom
-    - teams
+    # - teams-for-linux
+    - live_only_sink-out # teams-monitoring
   4: master
+
   5: firefox # doesn't exist, but prevents deej.current from changing firefox provided current_ignore_mapped is true
 
 # set this to true if you want the controls inverted (i.e. top is 0%, bottom is 100%)
@@ -59,4 +63,4 @@ baud_rate: 9600
 volume_step: 1
 
 # whether to change volume of current window if it's also explicitly mapped elsewhere
-current_ignore_mapped: true 
+current_ignore_mapped: true
