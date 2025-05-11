@@ -89,7 +89,7 @@ systemd-timer-notify &
 
 redshift -x && redshift &
 
-gwe --hide-window &
+# gwe --hide-window &
 
 #sudo tuxclockerd &
 
