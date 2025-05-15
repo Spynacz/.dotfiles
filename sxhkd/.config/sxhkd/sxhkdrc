@@ -67,7 +67,8 @@ super + t
     kitty #--single-instance
 
 super + {_,shift} + b
-    firefox {_,--private-window}
+    zen-browser {_,--private-window}
+    # firefox {_,--private-window}
     #brave {_,--incognito}
 
 # super + n
