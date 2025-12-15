@@ -13,7 +13,7 @@ slider_mapping:
     - vlc
     - mpv
     - elisa
-    - python3.12 #lollypop
+    - python3.13 #lollypop
     - stremio
     - tidal-hifi
     - plexmediaplayer
@@ -23,7 +23,12 @@ slider_mapping:
     - plex-bin
     - amberol
     - mpd
+    - alsa_playback.mpd
     - cmus
+    - audacious
+    - harmonoid
+    - dopamine
+    - feishin
   1:
     # - firefox
     - firefox_virtual-out
@@ -32,6 +37,7 @@ slider_mapping:
     - deej.current
     - playstation
     - runner # undertale? steam something? idk
+    - SDL Application #cs2 
     # - java
     # - witcher2
     # - wine64-preloader
@@ -50,10 +56,14 @@ slider_mapping:
     - live_only_sink-out # teams-monitoring
   4: master
 
-  5: firefox # doesn't exist, but prevents deej.current from changing firefox provided current_ignore_mapped is true
+  5: 
+    - firefox # doesn't exist, but prevents deej.current from changing firefox provided current_ignore_mapped is true
+    - firefox-bin # firefox beta (and maybe nightly)
+    - teams-for-linux
+    - chromium
 
 # set this to true if you want the controls inverted (i.e. top is 0%, bottom is 100%)
-invert_sliders: true
+invert_sliders: false
 
 # settings for connecting to the arduino board
 com_port: /dev/deej
