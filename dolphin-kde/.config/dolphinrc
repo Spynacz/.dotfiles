@@ -1,0 +1,42 @@
+MenuBar=Disabled
+
+[DetailsMode]
+LeftPadding=0
+PreviewSize=16
+RightPadding=0
+
+[ExtractDialog]
+2 screens: Height=480
+2 screens: Width=950
+DirHistory[$e]=$HOME/Downloads/Y1 themes/360p/
+
+[General]
+GlobalViewProps=false
+ShowFullPath=true
+ShowStatusBar=FullWidth
+ShowZoomSlider=true
+Version=202
+ViewPropsTimestamp=2025,2,6,21,26,15.552
+
+[Icons]
+Theme=Papirus-Dark
+
+[IconsMode]
+PreviewSize=256
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=22
+
+[MainWindow]
+MenuBar=Disabled
+
+[PreviewSettings]
+Plugins=f3d-plugin-alembic,appimagethumbnail,audiothumbnail,f3d-plugin-native,f3d-plugin-occt,comicbookthumbnail,cursorthumbnail,djvuthumbnail,f3d-plugin-draco,ebookthumbnail,exrthumbnail,f3d-plugin-assimp,heif,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,svgthumbnail,f3d-plugin-usd,f3d-plugin-vdb,ffmpegthumbs,webp-pixbuf
+
+[UiSettings]
+ColorScheme=everblush
+
+[ViewPropertiesDialog]
+2 screens: Height=790
+2 screens: Width=446

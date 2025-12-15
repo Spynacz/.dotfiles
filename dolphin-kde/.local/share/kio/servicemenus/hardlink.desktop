@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=all/allfiles;
+Actions=HardLinkHere;
+
+[Desktop Action HardLinkHere]
+Name=Create hard link in...
+Icon=link
+Exec=dolphin-hardlink.sh "%f"
+

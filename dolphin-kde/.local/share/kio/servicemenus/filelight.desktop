@@ -1,0 +1,45 @@
+[Desktop Entry]
+Actions=filelight
+Type=Service
+MimeType=inode/directory;
+X-KDE-MaxNumberOfUrls=1
+
+[Desktop Action filelight]
+Name=View Disk Usage Statistics
+Name[ar]=عرض إحصائيّات استخدام القرص
+Name[bg]=Преглед на статистика на използване на диска
+Name[ca]=Visualització d'estadístiques d'ús del disc
+Name[ca@valencia]=Visualització d'estadístiques d'ús del disc
+Name[cs]=Zobrazit statistiku využití místa na pevném disku
+Name[da]=Vis statistik over diskforbrug
+Name[de]=Statistik über Festplattenbelegung
+Name[eo]=Rigardi Statistikon pri Diskuzado
+Name[es]=Ver estadísticas del uso de discos
+Name[eu]=Ikusi disko-erabileraren estatistikak
+Name[fi]=Näytä levynkäyttötilastot
+Name[fr]=Afficher les statistiques d'utilisation des disques
+Name[gl]=Ver as estatísticas de uso do disco
+Name[he]=הצגת סטטיסטיקת תפוסת כונן
+Name[hu]=Lemezhasználati statisztika megtekintése
+Name[ia]=Vide statisticas de uso de disco
+Name[is]=Skoða tölfræði notkunar á diskaplássi
+Name[it]=Visualizza le statistiche di utilizzo del disco
+Name[ka]=დისკის გამოყენების სტატისტიკის ნახვა
+Name[ko]=디스크 사용 통계 보기
+Name[lt]=Rodyti disko naudojimo statistiką
+Name[lv]=Skatīt diska izlietojuma statistika
+Name[nl]=Gebruiksstatistieken van schijven bekijken
+Name[nn]=Vis statistikk over diskbruk
+Name[pl]=Obejrzyj wykorzystanie swojego dysku
+Name[pt_BR]=Exibir estatísticas de uso do disco
+Name[ro]=Vedeți statistici de utilizare a discului
+Name[ru]=Просмотр статистики использования дисков
+Name[sl]=Pogled statistike uporabe diska
+Name[sv]=Visa statistik över diskanvändning
+Name[ta]=வட்டு பயன்பாட்டு விவரங்களை காட்டு
+Name[tr]=Disk Kullanımı İstatistiklerini Görüntüle
+Name[uk]=Перегляд статистики використання диска
+Name[zh_CN]=查看磁盘占用情况统计信息
+Name[zh_TW]=查看磁碟用量統計
+Icon=filelight
+Exec=filelight %u
