@@ -17,6 +17,10 @@ alias se="sudoedit"
 
 alias n="pnpm"
 
+alias yt="yt-dlp"
+alias pr="yt-dlp"
+alias snd="yt-dlp -x --audio-format mp3 -o '%(title)s.%(ext)s'"
+
 # Open files
 alias open="xdg-open"
 
@@ -41,8 +45,9 @@ alias s="vim $HOME/.config/sxhkd/sxhkdrc"
 # alias kzb="pulseeffects -l \"KZ ZSN AutoIEF bass\""
 # alias kzbass="pulseeffects -l \"KZ ZSN AutoIEF bass\""
 
-alias la="ls -Alh"
-alias ll="ls -lh"
+alias ls="eza"
+alias la="ls -Al --group"
+alias ll="ls -l --group"
 
 alias md="mkdir -p"
 
