@@ -4,16 +4,32 @@ library: ~/Music/library.db
 import:
   move: yes
 
-paths:
-  default: $albumartist/[$original_year] $album/$track. $title
-  singleton: $artist/$track. $title
-  comp: $albumartist/[$original_year] $album/$track. $title
-  albumtype:ep: $albumartist/[$original_year] $album [EP]/$track. $title
+original_date: yes
 
-plugins: fetchart embedart lyrics lastgenre the
+plugins: musicbrainz discogs deezer fetchart embedart lyrics lastgenre the fromfilename scrub zero convert the beetstream duplicates
 
 fetchart:
   minwidth: 800
+  cover_format: jpeg
 
 lastgenre:
   count: 3
+
+zero:
+  fields: comments
+
+convert:
+  dest: "~/Music mp3"
+  never_convert_lossy_files: yes
+  album_art_maxwidth: 600
+  copy_album_art: yes
+
+beetstream:
+  host: 0.0.0.0
+  port: 8045
+
+paths:
+  default: "%the{$albumartist}/[$original_year] $album%aunique{}/$track. $title"
+  singleton: "%the{$artist}/$track. $title"
+  comp: "%the{$albumartist}/[$original_year] $album%aunique{}/$track. $title"
+  albumtype:ep: "%the{$albumartist}/[$original_year] $album%aunique{} [EP]/$track. $title"
