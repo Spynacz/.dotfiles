@@ -15,13 +15,72 @@ XF86MonBrightnessUp
     ddcutil --bus 8 setvcp 10 + 10 --sleep-multiplier .1
 
 # F3
-XF86Calculator
+# XF86Calculator
+    # orca-slicer
     
 
 # F4
 XF86Tools
     betterlockscreen -l
-    
+
+
+#################
+# Wade the Wide #
+#################
+
+F13
+# soundux
+
+F14
+# soundux
+
+F15
+# soundux
+
+F16
+# soundux
+
+F17
+# soundux
+
+F18
+    $HOME/.local/bin/sessions/touchdeck/session.sh
+
+F19
+    firefox "cad.onshape.com" && bspc desktop -f '1'
+
+F20
+    orca-slicer
+
+F21
+    obsidian
+
+F22
+    jellyfinmediaplayer
+
+F23
+    ~/.config/sxhkd/ytmusic.sh
+
+F24
+    heroic
+
+KP_End
+    /usr/bin/mangohud steam
+
+KP_Down
+    ~/.config/sxhkd/discord.sh
+
+KP_Next
+    easyeffects
+
+KP_Left
+    GTK_THEME=Adwaita:dark pavucontrol
+
+# KP_Begin
+# soundux
+
+#################
+
 
 # █▄ ▄█ ██▀ █▀▄ █ ▄▀▄
 # █ ▀ █ █▄▄ █▄▀ █ █▀█
@@ -64,27 +123,25 @@ Pause
 # Launchers
 
 super + t
-    kitty #--single-instance
+    kitty --single-instance -o allow_remote_control=yes --listen-on unix:@mykitty 
 
 super + {_,shift} + b
-    zen-browser {_,--private-window}
-    # firefox {_,--private-window}
+    firefox {_,--private-window}
+    # zen-browser {_,--private-window}
     #brave {_,--incognito}
 
 # super + n
 #     obsidian
 
 super + d
-    discord
-    # discord && bspc desktop --focus 10 && bspc desktop --focus last
+    ~/.config/sxhkd/discord.sh
 
 super + e
     dolphin
 
 super + s
-    youtube-music
+    ~/.config/sxhkd/ytmusic.sh
     # spotify
-    # spotify && bspc desktop --focus 10 && bspc desktop --focus last
 
 #super + c
 #    jellyfinmediaplayer
@@ -100,18 +157,25 @@ super + Escape
 
 Print
     flameshot gui
+    # spectacle --region --background
 
+# current monitor
 shift + Print
-    flameshot screen
+    spectacle --current --background --copy-image --output "$HOME/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png"
+    # flameshot screen
 
-ctrl + Print
-    flameshot full
+ctrl + Print 
+    spectacle --fullscreen --background --copy-image --output "$HOME/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png"
+    # flameshot full
+
+alt + Print
+    spectacle --activewindow --background --copy-image --copy-image --output "$HOME/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S)_$(cat /proc/$(xdotool getwindowpid $(xdotool getwindowfocus))/comm).png"
+
+# ctrl + shift + Pause
+#     $HOME/.local/bin/fan-auto
 
 ctrl + shift + Pause
-    $HOME/.local/bin/fan-auto
-
-ctrl + shift + Print
-    killall deej; deej -c $HOME/.config/deej/config.yaml
+    deejrestart.sh
 
 ctrl + shift + Delete
     nmcli con down Wired && sleep 2 && nmcli con up Wired
@@ -131,7 +195,7 @@ super + shift + Escape
 	pkill -USR1 -x sxhkd
 
 # quit/restart bspwm
-super + alt + {q,r}
+super + shift + alt + {q,r}
 	bspc {quit,wm -r}
 
 # close and kill
@@ -171,8 +235,19 @@ super + ctrl + {m,x,y,z}
 #
 
 # focus the node in the given direction
-super + {_,shift + }{h,j,k,l}
-	bspc node -{f,s} {west,south,north,east}
+# super + {_,shift + }{h,j,k,l}
+# 	bspc node -{f,s} {west,south,north,east}
+
+# focus the node in the given direction
+# Now with multi-monitor support. (should work like i3)
+super + {_, shift +, ctrl +}{h,j,k,l}
+    mode={f,s,n}; \
+    direction={west,south,north,east}; \
+    if [ $mode = "f" ]; then \
+        bspc node -f $direction.local || bspc monitor -f $direction; \
+    else; \
+        bspc node -$mode $direction.local || bspc node -m $direction --follow; \
+    fi
 
 # focus the node for the given path jump
 super + {p,b,comma,period}
@@ -308,6 +383,6 @@ super + grave
 
 # super + grave
 #     $HOME/.local/bin/bspwm-scratchpad ".*"
-
-#super + grave
+#
+# super + grave
 #    $HOME/bspwm-scratchpad/.venv/bin/python $HOME/bspwm-scratchpad/scratchpad.py ".*" --behaviour swap
