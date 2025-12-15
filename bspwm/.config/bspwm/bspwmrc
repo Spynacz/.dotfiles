@@ -34,7 +34,7 @@ bspc config window_gap           5
 
 bspc config automatic_scheme	alternate
 bspc config split_ratio         0.5
-bspc config borderless_monocle  true
+bspc config borderless_monocle  false
 bspc config gapless_monocle     true
 bspc config single_monocle      true
 
@@ -42,6 +42,8 @@ bspc config focus_follows_pointer false
 bspc config pointer_motion_interval 7ms
 
 bspc config ignore_ewmh_focus true
+
+bspc config external_rules_command $HOME/.config/bspwm/externalrules.sh
 
 bspc rule -r '*'
 
@@ -53,6 +55,7 @@ bspc rule -a com.github.th_ch.youtube_music desktop=10 split_dir=north split_rat
 bspc rule -a Pavucontrol state=floating
 #bspc rule -a obsidian desktop=^10 follow=off locked=on
 bspc rule -a firefox desktop focused:'^1' follow=on
+bspc rule -a "Firefox Beta" desktop focused:'^1' follow=on
 bspc rule -a kitty desktop focused:'^2' follow=on
 bspc rule -a Blueman-manager state=floating
 bspc rule -a zenity state=floating
@@ -68,6 +71,8 @@ dbus-update-activation-environment --systemd --all
 
 # xsetroot -cursor_name left_ptr
 
+fcitx5 &
+
 killall polybar
 polybar -r main &
 polybar -r second &
@@ -79,7 +84,7 @@ picom --daemon &
 # pgrep bspswallow || bspswallow &
 
 #shuf -e -n 1 $HOME/.wallpapers/Custom/* | xargs feh --no-fehbg --bg-fill &
-feh --no-fehbg --bg-fill $HOME/.wallpapers/red-mountains.jpeg
+feh --no-fehbg --bg-fill $HOME/.wallpapers/colorful-mountains.png
 #--bg-fill --geometry +1350+0 $HOME/.wallpapers/wall/forest-fall-2560×1440.jpg
 killall dunst
 dunst &
@@ -100,8 +105,8 @@ easyeffects --gapplication-service &
 #xfce4-power-manager &
 
 /usr/bin/kdeconnectd &
-kdeconnect-indicator &
-kdeconnect-battery.sh &
+# kdeconnect-indicator &
+# kdeconnect-battery.sh &
 
 pgrep deej || deej -c /home/mateusz/.config/deej/config.yaml &
 
@@ -115,6 +120,12 @@ playerctld &
 # should fix firefox opening dolphin with wrong theme
 dolphin --daemon &
 
+espanso &
+
 discord --start-minimized &
 
+qpwgraph &
+soundux --hidden &
+
+beet beetstream &
 # obsidian &
