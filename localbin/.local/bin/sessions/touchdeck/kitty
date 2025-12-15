@@ -1,0 +1,5 @@
+layout tall:bias=70
+cd ~/Dev/TouchDeck
+launch --title 'vim' --hold nvim
+launch --title 'pio' --hold
+launch --title 'serial' --hold 
